@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+/**
+ * Display the frame of of the parallelepiped AxBxC dimension.
+ */
+public class Task09 {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the length А: ");
+        int A = in.nextInt();
+        System.out.println("Enter the width В: ");
+        int B = in.nextInt();
+        System.out.println("Enter the height С: ");
+        int C = in.nextInt();
+        for (int x = 0; x <= B/2+C; x++) { // A+B=32
+            for (int y = 0; y <= A+B; y++) { // B+C=20
+                if (x == 0 && y >= B/2 || // length
+                   (x == B/2 && y <= (A+B-B/2)) ||
+                   (x == C && y >= B/2) ||
+                   (x == C+B/2 && y <= (A+B-B/2)) ||
+                        (y == 0 && x >= B/2) ||  // height
+                        (y == B/2 && x <= C) ||
+                        (y == A+B && x <= C) ||
+                        (y == A+B-B/2 && x >= B/2) ||
+                            (y == B/2-x) || // width
+                            ((y == C+B/2-x) && x >=C) ||
+                            ((y == A+B-x) && x <=B/2) ||
+                            (y == A+B+C-x)
+                   )
+                {
+                    System.out.print("* ");
+                }
+                else {
+                    System.out.print("  ");
+                }
+            }
+
+            System.out.println("");
+        }
+    }
+}
