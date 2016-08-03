@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 /**
- * Display the frame of of the parallelepiped AxBxC dimension.
+ * Display the frame of the parallelepiped AxBxC dimension.
  */
 public class Parallelepiped {
     public static void main(String[] args) {
