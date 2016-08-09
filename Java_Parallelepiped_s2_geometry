@@ -12,17 +12,17 @@ public class Parallelepiped {
         int B = in.nextInt();
         System.out.println("Enter the height С: ");
         int C = in.nextInt();
-        for (int x = 0; x <= B/2+C; x++) { // A+B=32
-            for (int y = 0; y <= A+B; y++) { // B+C=20
-                if (x == 0 && y >= B/2 || // length
+        for (int x = 0; x <= B/2+C; x++) { 
+            for (int y = 0; y <= A+B; y++) { 
+                if (x == 0 && y >= B/2 ||                // length
                    (x == B/2 && y <= (A+B-B/2)) ||
                    (x == C && y >= B/2) ||
                    (x == C+B/2 && y <= (A+B-B/2)) ||
-                        (y == 0 && x >= B/2) ||  // height
+                        (y == 0 && x >= B/2) ||          // height
                         (y == B/2 && x <= C) ||
                         (y == A+B && x <= C) ||
                         (y == A+B-B/2 && x >= B/2) ||
-                            (y == B/2-x) || // width
+                            (y == B/2-x) ||              // width
                             ((y == C+B/2-x) && x >=C) ||
                             ((y == A+B-x) && x <=B/2) ||
                             (y == A+B+C-x)
